@@ -1,0 +1,37 @@
+<header>
+    <h1>ShareReplay</h1>
+    <div>
+        <h2>List courses beginner</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let beginner of beginnerCourses$ | async">
+                    <td>{{beginner.userId}}</td>
+                    <td>{{beginner.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>List courses advanced</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let advanced of advancedCourses$ | async">
+                    <td>{{advanced.userId}}</td>
+                    <td>{{advanced.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</header>
